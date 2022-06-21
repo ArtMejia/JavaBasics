@@ -5,8 +5,15 @@ public class Main {
         String firstName = "Artenio";
         String lastName = "Mejia";
 
-        String fullName = firstName + " " + lastName;
+        String fullName = createFullName(firstName, lastName);
+
         System.out.println(fullName);
+
+        System.out.println(createFullName("First", "Last"));
+
     }
 
+    private static String createFullName(String firstname, String lastname) {
+        return firstname + " " + lastname;
+    }
 }
