@@ -7,9 +7,15 @@ public class Main {
 
         String fullName = createFullName(firstName, lastName);
 
+        NameGenerator nameGen = new NameGenerator();
+
+        String generateFullName = nameGen.generateFullName("John", "Doe");
+
         System.out.println(fullName);
 
         System.out.println(createFullName("First", "Last"));
+
+        System.out.println(generateFullName);
 
     }
 
