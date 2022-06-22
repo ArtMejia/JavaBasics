@@ -19,7 +19,7 @@ public class Main {
 
     }
 
-    private static String createFullName(String firstname, String lastname) {
-        return firstname + " " + lastname;
+    private static String createFullName(String firstName, String lastName) {
+        return firstName + " " + lastName;
     }
 }
