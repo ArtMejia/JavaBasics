@@ -3,7 +3,9 @@ package com.mejia.challenge2;
 public class Main {
     public static void main(String[] args) {
 
+//      int result = (int)(Math.random() * 4);
         Car nameCar = new Car();
+//      System.out.println(result);
 
         String Car1 = nameCar.generateCar("Chevy", "Camaro 2SS", 10000, (float) 0.10 );
         String Car2 = nameCar.generateCar("Ford", "Mustang", 30000, (float) 0.50);
@@ -20,6 +22,9 @@ public class Main {
 
 
     private static String createCar(String make, String model, int mileage, float gasTankPercentage) {
-        return  make + " " + model + " " + mileage + " " + gasTankPercentage;
+        return  "Make:" + make + " Model:" + model + " Mileage:" + mileage + " GTP:" + gasTankPercentage;
     }
+
+    //private static Integer randomCar(int)
+
 }
