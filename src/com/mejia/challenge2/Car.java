@@ -42,8 +42,11 @@ public class Car {
         return gasTankPercentage;
     }
 
-    public void setGasTankPercentage(float gasTankPercentage) {
-        this.gasTankPercentage = gasTankPercentage;
+
+    @Override
+    public String toString() {
+        return "Make: " + make + " Model: " + model + " Mileage: " + mileage + " Gas Tank: " + gasTankPercentage;
     }
+
 }
 

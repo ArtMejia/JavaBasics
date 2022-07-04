@@ -3,10 +3,6 @@ package com.mejia.challenge2;
 public class Main {
     public static void main(String[] args) {
 
-//      int result = (int)(Math.random() * 4);
-//        Car nameCar = new Car();
-//      System.out.println(result);
-
 //        String Car1 = nameCar.generateCar("Chevy", "Camaro 2SS", 10000, (float) 0.10 );
 //        String Car2 = nameCar.generateCar("Ford", "Mustang", 30000, (float) 0.50);
 //        String Car3 = nameCar.generateCar("Dodge", "Hellcat", 100, (float) 0.90);
