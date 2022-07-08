@@ -1,5 +1,5 @@
 package com.mejia.asktheuser;
-
+import com.mejia.asktheuser.Quiz;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -17,13 +17,13 @@ public class UserInterface {
         boolean broccoli = broccoli();
         String capital = capitalOfGA();
 
-
-        Quiz generatedUser = new Quiz();
-        System.out.println();
+      //  Quiz finalQuiz = new Quiz(72, 29600, 1000000, 2.5, 329000000, 3.14159265, true, "Atlanta");
 
     }
 
-    private static byte quizFeetToInches() {
+
+
+        private static byte quizFeetToInches() {
         System.out.print("How many inches are in 6 feet?\nAnswer: ");
         byte userInches = scanner.nextByte();
         if (userInches == 72) {
@@ -109,3 +109,7 @@ public class UserInterface {
         return userCapitalOfGA;
     }
 }
+
+
+
+
