@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Song Factory\n\n");
 
         String title = UI.readString("What is the title of the song?");
-        String artist = UI.readString("Who sing the song?");
+        String artist = UI.readString("Who sings the song?");
         String genre = UI.readString("What is the genre of the song?");
         int seconds = UI.readInt("How long, in seconds, is the song?", 0, 3600);
 

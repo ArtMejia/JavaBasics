@@ -125,6 +125,7 @@ public class UI {
             }
         }
     }
+
     public static byte readByte(String question, byte min, byte max) {
         while (true) {
             try {

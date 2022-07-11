@@ -86,17 +86,17 @@ public class Quiz {
         this.capital = capital;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Quiz{" +
-//                "inches=" + inches +
-//                ", question370X90=" + question370X90 +
-//                ", riPop=" + riPop +
-//                ", ansFloat=" + ansFloat +
-//                ", usaPop=" + usaPop +
-//                ", pi=" + pi +
-//                ", broccoli=" + broccoli +
-//                ", capital='" + capital + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Quiz{" +
+                "inches=" + inches +
+                ", question370X90=" + question370X90 +
+                ", riPop=" + riPop +
+                ", ansFloat=" + ansFloat +
+                ", usaPop=" + usaPop +
+                ", pi=" + pi +
+                ", broccoli=" + broccoli +
+                ", capital='" + capital + '\'' +
+                '}';
+    }
 }

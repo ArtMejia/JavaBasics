@@ -17,11 +17,10 @@ public class UserInterface {
         boolean broccoli = broccoli();
         String capital = capitalOfGA();
 
-      //  Quiz finalQuiz = new Quiz(72, 29600, 1000000, 2.5, 329000000, 3.14159265, true, "Atlanta");
+        Quiz finalQuiz = new Quiz(inches, question370X90, riPop, ansFloat, usaPop, pi, broccoli, capital);
+        System.out.println(finalQuiz);
 
     }
-
-
 
         private static byte quizFeetToInches() {
         System.out.print("How many inches are in 6 feet?\nAnswer: ");
