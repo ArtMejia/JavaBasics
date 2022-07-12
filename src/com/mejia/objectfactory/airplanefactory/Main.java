@@ -18,7 +18,6 @@ public class Main {
             System.out.println("3) Exit The Program");
             byte menuChoice = UI.readByte("Choose an option", (byte) 1, (byte) 3);
 
-            
             if (menuChoice == 3) break;
             else if (menuChoice == 2) {
                 if (hanger.size() == 0) {
@@ -41,7 +40,6 @@ public class Main {
         }
 
         System.out.println("\nThank you for using the program...");
-
     }
 
     private static Airplane createAirplane() {
