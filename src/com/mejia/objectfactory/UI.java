@@ -9,7 +9,7 @@ public class UI {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-//  String, short, double, int , boolean
+//  String, short, double, int , boolean, float, long, byte, char
 
 //    public static String readString(String question) {
 //        System.out.print(question);
@@ -33,10 +33,24 @@ public class UI {
     public static String readString(String question) {
         while (true) {
             System.out.print(question+"\nInput: ");
-            String input = scanner.nextLine();
-            if ( !input.trim().equals("")) {
+            String input = scanner.nextLine().trim();
+            if ( !input.equals("")) {
                 return input;
-            }
+            } else
+                System.out.println("\nYou can not leave the input blank");
+        }
+    }
+
+    public static char readChar(String question) {
+        while (true) {
+            System.out.print(question+"\nInput: ");
+            String input = scanner.nextLine().trim();
+            if ( input.length() == 1) {
+                return input.charAt(0);
+            } else if (input.equals("")) {
+                System.out.println("\nYou can not leave the input blank");
+            } else
+                System.out.println("\nYou must only input one character");
         }
     }
 
@@ -131,6 +145,24 @@ public class UI {
             try {
                 System.out.print(question + "\n("+min+" - " +max+ "): ");
                 byte input =  scanner.nextByte();
+                scanner.nextLine();
+                if (input <= max && input >= min) {
+                    return input;
+                } else {
+                    System.out.println("input must be between " + min + " and " + max);
+                }
+            } catch (Exception exception) {
+                System.out.println("input must be between " + min + " and " + max);
+                scanner.nextLine();
+            }
+        }
+    }
+
+    public static float readFloat(String question, float min, float max) {
+        while (true) {
+            try {
+                System.out.print(question + "\n("+min+" - " +max+ "): ");
+                float input =  scanner.nextFloat();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;

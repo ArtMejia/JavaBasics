@@ -45,13 +45,14 @@ public class Airplane {
 
     @Override
     public String toString() {
-        return "Airplane{" +
-                "modelName='" + modelName + '\'' +
-                ", tailNumber='" + tailNumber + '\'' +
-                ", passengerCap=" + passengerCap +
-                ", marketValue=" + marketValue +
-                ", gasTank=" + gasTank +
-                ", isFlying=" + isFlying +
-                '}';
+        final StringBuilder sb = new StringBuilder("");
+        sb.append("Model: '").append(modelName).append('\'');
+        sb.append("\nTail Number: '").append(tailNumber).append('\'');
+        sb.append("\nPassenger Capacity: ").append(passengerCap);
+        sb.append("\nPrice: ").append(marketValue);
+        sb.append("\nFuel %=").append(gasTank*100).append("%");
+        //(condition) ? (if true, do this) : (otherwise, do this)
+        sb.append("\nThe plane is ").append(isFlying ? "35,000ft in the air!" : "on the ground");
+        return sb.toString();
     }
 }
