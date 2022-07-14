@@ -1,7 +1,9 @@
 package com.mejia.objectfactory.nflteamfactory;
 
+import com.mejia.objectfactory.UI;
+
 public class NFLTeam {
-    //String city, String name, long valuation, byte championships
+    //String city, String name, long valuation, boolean isWinner, byte championships
     private String city;
     private String name;
     private long valuation;
@@ -43,7 +45,7 @@ public class NFLTeam {
         sb.append("\nName: '").append(name).append('\'');
         sb.append("\nWorth: $").append(valuation);
         //(condition) ? (if true, do this) : (otherwise, do this)
-        sb.append("\nWon SuperBowl: ").append(isWinner ? "Team owns a Vince Lombardi Trophy!" : "Not yet!");
+        sb.append("\nWon SuperBowl: ").append(isWinner ? "Yes! Team owns a Vince Lombardi Trophy!" : "Not yet!");
         sb.append("\nSuperBowl Wins: ").append(championships);
         return sb.toString();
     }

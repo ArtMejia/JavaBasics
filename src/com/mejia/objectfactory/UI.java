@@ -176,3 +176,7 @@ public class UI {
         }
     }
 }
+
+//TODO: public static ArrayList<String> readListOfStrings (question, min, max)
+
+//TODO: public static String selectFromListOfString (question, ArrayList<String>)

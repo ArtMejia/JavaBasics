@@ -26,7 +26,7 @@ public class Main {
                 }
                 // Show league
                 System.out.println("-".repeat(20));
-                System.out.println("\nTEAM LEAGUE");
+                System.out.println("\nLEAGUE");
                 for (int i = 0; i < league.size(); i++) {
                     System.out.println(i + 1 + ")\n" + league.get(i) + "\n");
                 }
@@ -42,14 +42,13 @@ public class Main {
         System.out.println("Thank you for using the program...");
     }
 
-    private static NFLTeam createNFLTeam() {
+    public static NFLTeam createNFLTeam() {
         String city = UI.readString("What city is the team from?");
         String name = UI.readString("What is the team name?");
-        long valuation = UI.readLong("How much is the team worth?", 0, 4_000_000_000L);
-        boolean isWinner = UI.readBoolean("Has the team won a championship?");
-        byte championships = UI.readByte("How many championships has the team won?", (byte )0, (byte )55);
+        long valuation = UI.readLong("How much are the " + name +" worth?", 0, 4_000_000_000L);
+        boolean isWinner = UI.readBoolean("Have the " + name + " won a championship?");
+        byte championships = UI.readByte("How many championships have the " + name + " won?", (byte) 0, (byte) 55);
 
         return new NFLTeam(city, name, valuation, isWinner, championships);
     }
-
 }

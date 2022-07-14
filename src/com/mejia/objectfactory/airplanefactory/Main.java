@@ -42,7 +42,7 @@ public class Main {
         System.out.println("\nThank you for using the program...");
     }
 
-    private static Airplane createAirplane() {
+    public static Airplane createAirplane() {
         String modelName = UI.readString("What is the model name?");
         String tailNumber = UI.readString("What is the tail number?");
         short passengerCap = 100;//UI.readShort("What is the passenger capacity?", (short) 0, (short) 300);
