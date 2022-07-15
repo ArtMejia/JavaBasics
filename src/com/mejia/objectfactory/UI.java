@@ -34,9 +34,9 @@ public class UI {
 
     public static String readString(String question) {
         while (true) {
-            System.out.print(question+"\nInput: ");
+            System.out.print(question + "\nInput: ");
             String input = scanner.nextLine().trim();
-            if ( !input.equals("")) {
+            if (!input.equals("")) {
                 return input;
             } else
                 System.out.println("\nYou can not leave the input blank");
@@ -45,9 +45,9 @@ public class UI {
 
     public static char readChar(String question) {
         while (true) {
-            System.out.print(question+"\nInput: ");
+            System.out.print(question + "\nInput: ");
             String input = scanner.nextLine().trim();
-            if ( input.length() == 1) {
+            if (input.length() == 1) {
                 return input.charAt(0);
             } else if (input.equals("")) {
                 System.out.println("\nYou can not leave the input blank");
@@ -73,8 +73,8 @@ public class UI {
     public static int readInt(String question, int min, int max) {
         while (true) {
             try {
-                System.out.print(question + "\n("+min+" - " +max+ "): ");
-                int input =  scanner.nextInt();
+                System.out.print(question + "\n(" + min + " - " + max + "): ");
+                int input = scanner.nextInt();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;
@@ -91,8 +91,8 @@ public class UI {
     public static short readShort(String question, short min, short max) {
         while (true) {
             try {
-                System.out.print(question + "\n("+min+" - " +max+ "): ");
-                short input =  scanner.nextShort();
+                System.out.print(question + "\n(" + min + " - " + max + "): ");
+                short input = scanner.nextShort();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;
@@ -109,8 +109,8 @@ public class UI {
     public static double readDouble(String question, double min, double max) {
         while (true) {
             try {
-                System.out.print(question + "\n("+min+" - " +max+ "): ");
-                double input =  scanner.nextDouble();
+                System.out.print(question + "\n(" + min + " - " + max + "): ");
+                double input = scanner.nextDouble();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;
@@ -127,8 +127,8 @@ public class UI {
     public static long readLong(String question, long min, long max) {
         while (true) {
             try {
-                System.out.print(question + "\n("+min+" - " +max+ "): ");
-                long input =  scanner.nextLong();
+                System.out.print(question + "\n(" + min + " - " + max + "): ");
+                long input = scanner.nextLong();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;
@@ -145,8 +145,8 @@ public class UI {
     public static byte readByte(String question, byte min, byte max) {
         while (true) {
             try {
-                System.out.print(question + "\n("+min+" - " +max+ "): ");
-                byte input =  scanner.nextByte();
+                System.out.print(question + "\n(" + min + " - " + max + "): ");
+                byte input = scanner.nextByte();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;
@@ -163,8 +163,8 @@ public class UI {
     public static float readFloat(String question, float min, float max) {
         while (true) {
             try {
-                System.out.print(question + "\n("+min+" - " +max+ "): ");
-                float input =  scanner.nextFloat();
+                System.out.print(question + "\n(" + min + " - " + max + "): ");
+                float input = scanner.nextFloat();
                 scanner.nextLine();
                 if (input <= max && input >= min) {
                     return input;
@@ -181,7 +181,7 @@ public class UI {
 
     //TODO: public static String selectFromListOfString (question, ArrayList<String>)
 //new
-    public static boolean readYesOrNo (String question) {
+    public static boolean readYesOrNo(String question) {
         while (true) {
             String userInput = readString(question + "\n(y/n): ");
             char selection = userInput.toLowerCase().charAt(0);
@@ -191,12 +191,12 @@ public class UI {
         }
     }
 
-    public static ArrayList<String> readListOfStrings (String question, byte min, byte max) {
+    public static ArrayList<String> readListOfStrings(String question, byte min, byte max) {
         ArrayList<String> responses = new ArrayList<>();
         System.out.println(question);
         System.out.println("Please enter at least " + min + " inputs and the most " + max + " inputs.");
         for (int i = 0; i < max; i++) {
-            String userInput = readString("\n(" + (i+1) + "/" + max + ")");
+            String userInput = readString("\n(" + (i + 1) + "/" + max + ")");
             responses.add(userInput);
             if (responses.size() == max) {
                 System.out.println("Maximum number of inputs have been entered");
