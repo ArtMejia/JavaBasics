@@ -1,5 +1,7 @@
 package com.mejia.objectfactory;
 
+import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class UI {
@@ -175,8 +177,39 @@ public class UI {
             }
         }
     }
+    //TODO: public static ArrayList<String> readListOfStrings (question, min, max)
+
+    //TODO: public static String selectFromListOfString (question, ArrayList<String>)
+//new
+    public static boolean readYesOrNo (String question) {
+        while (true) {
+            String userInput = readString(question + "\n(y/n): ");
+            char selection = userInput.toLowerCase().charAt(0);
+            if (selection == 'y') return true;
+            if (selection == 'n') return false;
+            System.out.println("Input must be y or n");
+        }
+    }
+
+    public static ArrayList<String> readListOfStrings (String question, byte min, byte max) {
+        ArrayList<String> responses = new ArrayList<>();
+        System.out.println(question);
+        System.out.println("Please enter at least " + min + " inputs and the most " + max + " inputs.");
+        for (int i = 0; i < max; i++) {
+            String userInput = readString("\n(" + (i+1) + "/" + max + ")");
+            responses.add(userInput);
+            if (responses.size() == max) {
+                System.out.println("Maximum number of inputs have been entered");
+            } else if (responses.size() >= min && !readYesOrNo("Would you like to continue?")) break;
+        }
+        System.out.println("Your inputs have been recorded");
+        return responses;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<String> responses = readListOfStrings("test", (byte) 2, (byte) 4);
+        System.out.println(responses);
+    }
 }
 
-//TODO: public static ArrayList<String> readListOfStrings (question, min, max)
 
-//TODO: public static String selectFromListOfString (question, ArrayList<String>)
