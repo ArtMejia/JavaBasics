@@ -45,10 +45,11 @@ public class Main {
     public static NFLTeam createNFLTeam() {
         String city = UI.readString("What city is the team from?");
         String name = UI.readString("What is the team name?");
+        ArrayList players = UI.readListOfStrings("Name at least two players on the " + name + ":", (byte)2, (byte)4);
         long valuation = UI.readLong("How much are the " + name +" worth?", 0, 4_000_000_000L);
         boolean isWinner = UI.readBoolean("Have the " + name + " won a championship?");
         byte championships = UI.readByte("How many championships have the " + name + " won?", (byte) 0, (byte) 55);
 
-        return new NFLTeam(city, name, valuation, isWinner, championships);
+        return new NFLTeam(city, name, players, valuation, isWinner, championships);
     }
 }

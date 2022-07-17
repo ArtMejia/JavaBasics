@@ -4,6 +4,8 @@ import com.mejia.objectfactory.UI;
 
 import java.util.ArrayList;
 
+import static com.mejia.objectfactory.UI.readListOfStrings;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -45,12 +47,13 @@ public class Main {
     public static Airplane createAirplane() {
         String modelName = UI.readString("What is the model name?");
         String tailNumber = UI.readString("What is the tail number?");
+        ArrayList<String> crew = UI.readListOfStrings("Name at least two people on the planes crew:", (byte) 2, (byte) 4);
         short passengerCap = 100;//UI.readShort("What is the passenger capacity?", (short) 0, (short) 300);
         int marketValue = 1_000_000_000;//UI.readInt("What is the planes market value?", 0, 1_000_000_000);
         double gasTank = .5;//UI.readDouble("What is the current gas tank percent (as a decimal)?", 0, 1);
         boolean isFlying = false;//UI.readBoolean("Is the plane flying?");
 
-        return new Airplane(modelName, tailNumber, passengerCap, marketValue, gasTank, isFlying);
+        return new Airplane(modelName, tailNumber, crew, passengerCap, marketValue, gasTank, isFlying);
     }
 }
 
